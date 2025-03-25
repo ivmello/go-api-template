@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package message;
+
+option go_package = "github.com/ivmello/go-api-template/internal/handlers/grpc/message";
+
+service MessageService {
+  rpc CreateMessage(CreateMessageRequest) returns (MessageResponse);
+  rpc GetMessage(GetMessageRequest) returns (MessageResponse);
+  rpc UpdateMessage(UpdateMessageRequest) returns (EmptyResponse);
+  rpc DeleteMessage(DeleteMessageRequest) returns (EmptyResponse);
+  rpc ListMessages(ListMessagesRequest) returns (ListMessagesResponse);
+}
+
+message CreateMessageRequest {
+  string content = 1;
+}
+
+message GetMessageRequest {
+  string id = 1;
+}
+
+message UpdateMessageRequest {
+  string id = 1;
+  string content = 2;
+}
+
+message DeleteMessageRequest {
+  string id = 1;
+}
+
+message ListMessagesRequest {}
+
+message ListMessagesResponse {
+  repeated MessageResponse messages = 1;
+}
+
+message MessageResponse {
+  string id = 1;
+  string user_id = 2;
+  string content = 3;
+  string created_at = 4;
+  string updated_at = 5;
+}
+
+message EmptyResponse {}

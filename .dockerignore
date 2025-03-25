@@ -1,0 +1,12 @@
+.git
+.github
+.gitignore
+.vscode
+.idea
+.env
+README.md
+LICENSE
+*.md
+tmp/
+*.log
+bin/
