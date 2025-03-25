@@ -171,4 +171,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Credits
 
-Created by [Ivan Mello](https://github.com/ivmello)
+Created by [Igor Vieira de Mello](https://github.com/ivmello)
